@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import { useAnimeSearch } from '../hooks/use-anime-search'
-import { SearchInput } from '../components/search-input'
-import { useI18n } from '@/shared/components/providers/i18n-provider'
+import { useAnimeSearch } from '../hooks/use-anime-search';
+import { SearchInput } from '../components/search-input';
+import { useI18n } from '@/shared/components/providers/i18n-provider';
 
 export function AnimeSearchContainer() {
-  const { searchInput, setSearchInput, t } = useAnimeSearch()
+  const { searchInput, setSearchInput, t } = useAnimeSearch();
 
   return (
     <SearchInput
@@ -13,5 +13,5 @@ export function AnimeSearchContainer() {
       onChange={setSearchInput}
       placeholder={t('home.searchPlaceholder')}
     />
-  )
+  );
 }

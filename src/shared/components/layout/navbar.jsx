@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import styled from '@emotion/styled'
-import Link from 'next/link'
-import { Moon, Sun, Languages, Clapperboard } from 'lucide-react'
+import styled from '@emotion/styled';
+import Link from 'next/link';
+import { Moon, Sun, Languages, Clapperboard } from 'lucide-react';
 
 const Nav = styled.nav`
   position: fixed;
@@ -19,11 +19,11 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  
+
   @media (min-width: 768px) {
     padding: 0 48px;
   }
-`
+`;
 
 const Brand = styled(Link)`
   font-size: 24px;
@@ -34,28 +34,28 @@ const Brand = styled(Link)`
   align-items: center;
   gap: 12px;
   letter-spacing: -0.5px;
-  
+
   svg {
     color: var(--color-primary);
   }
-  
+
   span {
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   &:hover {
     opacity: 0.9;
   }
-`
+`;
 
 const Controls = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-`
+`;
 
 const IconButton = styled.button`
   display: flex;
@@ -69,7 +69,7 @@ const IconButton = styled.button`
   color: var(--color-text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
-  
+
   &:hover {
     background: var(--color-bg-card-hover);
     border-color: var(--color-primary);
@@ -81,7 +81,7 @@ const IconButton = styled.button`
     width: 20px;
     height: 20px;
   }
-`
+`;
 
 const LanguageButton = styled(IconButton)`
   width: auto;
@@ -90,19 +90,13 @@ const LanguageButton = styled(IconButton)`
   font-weight: 600;
   font-size: 14px;
   font-family: var(--font-outfit);
-`
+`;
 
 const Spacer = styled.div`
   height: 72px;
-`
+`;
 
-export function Navbar({ 
-  mode, 
-  language, 
-  brandText, 
-  onToggleTheme, 
-  onToggleLanguage 
-}) {
+export function Navbar({ mode, language, brandText, onToggleTheme, onToggleLanguage }) {
   return (
     <>
       <Nav>
@@ -110,13 +104,13 @@ export function Navbar({
           <Clapperboard size={28} strokeWidth={2.5} />
           <span>{brandText}</span>
         </Brand>
-        
+
         <Controls>
           <LanguageButton onClick={onToggleLanguage} title="Toggle language">
             <Languages size={18} />
             {language === 'en' ? 'EN' : 'ID'}
           </LanguageButton>
-          
+
           <IconButton onClick={onToggleTheme} title="Toggle theme">
             {mode === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </IconButton>
@@ -124,5 +118,5 @@ export function Navbar({
       </Nav>
       <Spacer />
     </>
-  )
+  );
 }

@@ -1,14 +1,14 @@
-"use client"
+'use client';
 
-import styled from '@emotion/styled'
-import { Search, X } from 'lucide-react'
+import styled from '@emotion/styled';
+import { Search, X } from 'lucide-react';
 
 const InputWrapper = styled.div`
   position: relative;
   width: 100%;
   max-width: 600px;
   margin: 0 auto 48px;
-`
+`;
 
 const SearchIconWrapper = styled.div`
   position: absolute;
@@ -19,7 +19,7 @@ const SearchIconWrapper = styled.div`
   display: flex;
   align-items: center;
   pointer-events: none;
-`
+`;
 
 const Input = styled.input`
   width: 100%;
@@ -49,7 +49,7 @@ const Input = styled.input`
   &:hover:not(:focus) {
     border-color: var(--color-text-secondary);
   }
-`
+`;
 
 const ClearButton = styled.button`
   position: absolute;
@@ -72,9 +72,9 @@ const ClearButton = styled.button`
     background: var(--color-rating-low);
     color: white;
   }
-`
+`;
 
-export function SearchInput({ value, onChange, placeholder = "Search anime..." }) {
+export function SearchInput({ value, onChange, placeholder = 'Search anime...' }) {
   return (
     <InputWrapper>
       <SearchIconWrapper>
@@ -92,5 +92,5 @@ export function SearchInput({ value, onChange, placeholder = "Search anime..." }
         </ClearButton>
       )}
     </InputWrapper>
-  )
+  );
 }

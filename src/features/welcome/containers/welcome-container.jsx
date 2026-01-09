@@ -1,17 +1,13 @@
-"use client"
+'use client';
 
-import { useI18n } from '@/shared/components/providers/i18n-provider'
-import { useTheme } from '@/shared/components/providers/theme-provider'
-import { WelcomeView } from '../components/welcome-view'
+import { WelcomeView } from '../components/welcome-view';
+import { useWelcome } from '../hooks/use-welcome';
 
 export function WelcomeContainer() {
-  const { t, language, toggleLanguage } = useI18n()
-  const { mode, toggleTheme } = useTheme()
-  
-  const features = t('welcome.features.list')
+  const { t, language, toggleLanguage, features, mode, toggleTheme } = useWelcome();
 
   return (
-    <WelcomeView 
+    <WelcomeView
       mode={mode}
       language={language}
       toggleTheme={toggleTheme}
@@ -19,5 +15,5 @@ export function WelcomeContainer() {
       t={t}
       features={features}
     />
-  )
+  );
 }

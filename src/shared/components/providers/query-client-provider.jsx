@@ -1,6 +1,9 @@
-"use client"
+'use client';
 
-import { QueryClient, QueryClientProvider as QueryClientProviderPrimitive } from "@tanstack/react-query"
+import {
+  QueryClient,
+  QueryClientProvider as QueryClientProviderPrimitive,
+} from '@tanstack/react-query';
 
 const client = new QueryClient({
   defaultOptions: {
@@ -10,14 +13,10 @@ const client = new QueryClient({
       refetchOnReconnect: false,
     },
   },
-})
+});
 
 function QueryClientProvider({ children }) {
-  return (
-    <QueryClientProviderPrimitive client={client}>
-      {children}
-    </QueryClientProviderPrimitive>
-  )
+  return <QueryClientProviderPrimitive client={client}>{children}</QueryClientProviderPrimitive>;
 }
 
-export { QueryClientProvider }
+export { QueryClientProvider };

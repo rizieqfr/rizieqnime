@@ -1,12 +1,13 @@
 export const translations = {
   en: {
     brand: 'RizieqNime',
-    
+
     welcome: {
       title: 'Frontend Engineering Test',
       subtitle: 'for PARKEE',
       author: 'by Muh Rizieq Fazlulrahman Djafar',
-      description: 'This is a frontend engineering test project showcasing anime discovery using Kitsu API with Next.js, React Query, and Emotion.',
+      description:
+        'This is a frontend engineering test project showcasing anime discovery using Kitsu API with Next.js, React Query, and Emotion.',
       cta: 'Explore Anime',
       features: {
         title: 'Features',
@@ -16,11 +17,11 @@ export const translations = {
           'Anime detail page',
           'Dark/Light mode',
           'Multi-language (EN/ID)',
-          'Responsive design'
-        ]
-      }
+          'Responsive design',
+        ],
+      },
     },
-    
+
     home: {
       title: 'RizieqNime!',
       subtitle: 'Explore thousands of anime titles from Kitsu API',
@@ -30,9 +31,9 @@ export const translations = {
       loadingMore: 'Loading more...',
       endMessage: "You've reached the end!",
       noResults: 'No anime found for',
-      tryDifferent: 'Try a different search term'
+      tryDifferent: 'Try a different search term',
     },
-    
+
     detail: {
       backToList: 'Back to List',
       synopsis: 'Synopsis',
@@ -44,24 +45,25 @@ export const translations = {
       genres: 'Genres',
       noSynopsis: 'No synopsis available.',
       finished: 'Finished',
-      ongoing: 'Ongoing'
+      ongoing: 'Ongoing',
     },
-    
+
     common: {
       loading: 'Loading...',
       error: 'Error',
-      retry: 'Retry'
-    }
+      retry: 'Retry',
+    },
   },
-  
+
   id: {
     brand: 'RizieqNime',
-    
+
     welcome: {
       title: 'Frontend Engineering Test',
       subtitle: 'untuk PARKEE',
       author: 'oleh Muh Rizieq Fazlulrahman Djafar',
-      description: 'Ini adalah proyek tes frontend engineering yang menampilkan pencarian anime menggunakan Kitsu API dengan Next.js, React Query, dan Emotion.',
+      description:
+        'Ini adalah proyek tes frontend engineering yang menampilkan pencarian anime menggunakan Kitsu API dengan Next.js, React Query, dan Emotion.',
       cta: 'Jelajahi Anime',
       features: {
         title: 'Fitur',
@@ -71,11 +73,11 @@ export const translations = {
           'Halaman detail anime',
           'Mode Gelap/Terang',
           'Multi-bahasa (EN/ID)',
-          'Desain responsif'
-        ]
-      }
+          'Desain responsif',
+        ],
+      },
     },
-    
+
     home: {
       title: 'RizieqNime!',
       subtitle: 'Jelajahi ribuan judul anime dari Kitsu API',
@@ -85,9 +87,9 @@ export const translations = {
       loadingMore: 'Memuat lebih banyak...',
       endMessage: 'Kamu sudah sampai di akhir!',
       noResults: 'Tidak ditemukan anime untuk',
-      tryDifferent: 'Coba kata kunci lain'
+      tryDifferent: 'Coba kata kunci lain',
     },
-    
+
     detail: {
       backToList: 'Kembali ke Daftar',
       synopsis: 'Sinopsis',
@@ -99,13 +101,13 @@ export const translations = {
       genres: 'Genre',
       noSynopsis: 'Sinopsis tidak tersedia.',
       finished: 'Selesai',
-      ongoing: 'Tayang'
+      ongoing: 'Tayang',
     },
-    
+
     common: {
       loading: 'Memuat...',
       error: 'Error',
-      retry: 'Coba Lagi'
-    }
-  }
-}
+      retry: 'Coba Lagi',
+    },
+  },
+};

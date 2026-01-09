@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import { NavbarContainer } from '@/shared/containers/navbar-container'
+import { NavbarContainer } from '@/shared/containers/navbar-container';
 
 export default function MainLayout({ children }) {
   return (
@@ -8,5 +8,5 @@ export default function MainLayout({ children }) {
       <NavbarContainer />
       <main>{children}</main>
     </>
-  )
+  );
 }
