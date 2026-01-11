@@ -1,5 +1,3 @@
-'use client';
-
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { translations } from '@/shared/lib/i18n/translations';
 

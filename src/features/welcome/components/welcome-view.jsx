@@ -1,7 +1,5 @@
-'use client';
-
 import styled from '@emotion/styled';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Moon, Sun, Languages, ArrowRight, CheckCircle2, Clapperboard } from 'lucide-react';
 
 const PageWrapper = styled.div`
@@ -213,7 +211,7 @@ export function WelcomeView({ mode, language, toggleTheme, toggleLanguage, t, fe
 
         <Description>{t('welcome.description')}</Description>
 
-        <CTAButton href="/home">
+        <CTAButton to="/home">
           {t('welcome.cta')} <ArrowRight size={18} />
         </CTAButton>
 

@@ -1,7 +1,5 @@
-'use client';
-
 import styled from '@emotion/styled';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Moon, Sun, Languages, Clapperboard } from 'lucide-react';
 
 const Nav = styled.nav`
@@ -100,7 +98,7 @@ export function Navbar({ mode, language, brandText, onToggleTheme, onToggleLangu
   return (
     <>
       <Nav>
-        <Brand href="/home">
+        <Brand to="/home">
           <Clapperboard size={28} strokeWidth={2.5} />
           <span>{brandText}</span>
         </Brand>

@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useState, useCallback } from 'react';
 
 export function useIntersectionObserver({ threshold = 0.1, rootMargin = '50px' } = {}) {

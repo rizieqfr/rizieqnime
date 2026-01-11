@@ -1,5 +1,3 @@
-'use client';
-
 import { HomeView } from './components/home-view';
 import { useI18n } from '@/shared/components/providers/i18n-provider';
 

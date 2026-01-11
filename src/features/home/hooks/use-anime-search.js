@@ -1,13 +1,10 @@
-'use client';
-
 import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'react-router-dom';
 import { useDebounce } from '@/shared/hooks/use-debounce';
 import { useI18n } from '@/shared/components/providers/i18n-provider';
 
 export function useAnimeSearch() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { t } = useI18n();
 
   const initialSearch = searchParams.get('q') || '';
@@ -19,17 +16,17 @@ export function useAnimeSearch() {
 
     // Only update URL if the value is different
     if (debouncedSearch !== currentQ) {
-      const params = new URLSearchParams(searchParams.toString());
+      const newParams = new URLSearchParams(searchParams);
 
       if (debouncedSearch) {
-        params.set('q', debouncedSearch);
+        newParams.set('q', debouncedSearch);
       } else {
-        params.delete('q');
+        newParams.delete('q');
       }
 
-      router.replace(`?${params.toString()}`, { scroll: false });
+      setSearchParams(newParams, { replace: true });
     }
-  }, [debouncedSearch, router, searchParams]); // Dependency tetap aman karena ada check di dalam
+  }, [debouncedSearch, searchParams, setSearchParams]);
 
   return {
     searchInput,

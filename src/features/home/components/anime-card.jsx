@@ -1,7 +1,5 @@
-'use client';
-
 import styled from '@emotion/styled';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const Card = styled(Link)`
   display: flex;
@@ -117,7 +115,7 @@ export function AnimeCard({ anime }) {
   const imageUrl = posterImage?.medium || posterImage?.small || '/placeholder.jpg';
 
   return (
-    <Card href={`/anime/${id}`}>
+    <Card to={`/anime/${id}`}>
       <ImageWrapper>
         <Image src={imageUrl} alt={englishTitle} loading="lazy" />
         {averageRating && <RatingBadge rating={averageRating}>★ {parseFloat(averageRating).toFixed(1)}</RatingBadge>}

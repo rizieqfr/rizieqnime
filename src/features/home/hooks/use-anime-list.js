@@ -1,14 +1,12 @@
-'use client';
-
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'react-router-dom';
 import { getAnimeList } from '../api/get-anime-list';
 import { useI18n } from '@/shared/components/providers/i18n-provider';
 import { useIntersectionObserver } from '@/shared/hooks/use-intersection-observer';
 
 export function useAnimeList() {
   const { t } = useI18n();
-  const searchParams = useSearchParams();
+  const [searchParams] = useSearchParams();
   const search = searchParams.get('q') || '';
   const { ref, isIntersecting } = useIntersectionObserver();
 

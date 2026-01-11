@@ -1,13 +1,11 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
+import { useNavigate } from 'react-router-dom';
 import { BackButton } from '../components/ui/back-button';
 
 export function BackButtonContainer({ href = '/home', children }) {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    router.push(href);
+    navigate(href);
   };
 
   return <BackButton onClick={handleClick}>{children}</BackButton>;
