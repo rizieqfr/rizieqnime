@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RizieqNime
+
+A modern Anime Discovery Application built with React and Vite. Browse, search, and view details of your favorite anime using the Kitsu API.
+
+## Tech Stack
+
+- **Core**: React 19, Vite
+- **Routing**: React Router DOM v7
+- **Styling**: Emotion (CSS-in-JS)
+- **State/Data Fetching**: TanStack Query v5, Axios
+- **UI Components**: Lucide React (Icons), Sonner (Toasts)
+- **Validation**: Zod
+- **Font**: Outfit (via Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have **Node.js** and **pnpm** installed.
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To start the local development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm dev
+```
 
-## Learn More
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-To learn more about Next.js, take a look at the following resources:
+### Production Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To build the application for production:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm build
+```
 
-## Deploy on Vercel
+The artifacts will be generated in the `dist` directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Preview Production Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To preview the production build locally:
+
+```bash
+pnpm preview
+# or
+pnpm start
+```
+
+## Project Structure
+
+This project follows a component-based feature structure:
+
+```
+src/
+├── features/           # Feature-based logic and components
+│   ├── home/           # Anime Listing feature
+│   ├── anime-detail/   # Anime Detail feature
+│   └── welcome/        # Landing page
+├── shared/             # Shared utilities, components, and hooks
+│   ├── api/            # API configuration
+│   ├── components/     # Reusable UI components
+│   ├── hooks/          # Custom hooks
+│   └── styles/         # Global styles and themes
+├── Routes.jsx          # Route definitions
+└── main.jsx            # Application Entry Point
+```
+
+## Deployment
+
+The project is SPA-ready and includes configuration for seamless deployment on major platforms like Vercel and Netlify.
