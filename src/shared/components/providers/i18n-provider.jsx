@@ -31,6 +31,7 @@ export function I18nProvider({ children }) {
   useEffect(() => {
     const savedLang = localStorage.getItem('language');
     if (savedLang === 'en' || savedLang === 'id') {
+      //eslint-disable-next-line react-hooks/set-state-in-effect
       setLanguageState(savedLang);
     } else {
       const browserLang = navigator.language.toLowerCase();

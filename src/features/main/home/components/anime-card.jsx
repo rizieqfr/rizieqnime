@@ -43,7 +43,14 @@ const RatingBadge = styled.div`
   top: 8px;
   right: 8px;
   padding: 4px 8px;
-  background: rgba(0, 0, 0, 0.7);
+  background: ${
+    props => {
+      const rating = parseFloat(props.rating);
+      if (rating >= 80) return 'rgba(76, 175, 80, 0.8)'; // Green
+      if (rating >= 60) return 'rgba(255, 193, 7, 0.8)'; // Yellow
+      return 'rgba(244, 67, 54, 0.8)'; // Red
+    }
+  };          
   backdrop-filter: blur(4px);
   border-radius: 4px;
   font-size: 11px;
@@ -113,7 +120,7 @@ export function AnimeCard({ anime }) {
     <Card href={`/anime/${id}`}>
       <ImageWrapper>
         <Image src={imageUrl} alt={englishTitle} loading="lazy" />
-        {averageRating && <RatingBadge>★ {parseFloat(averageRating).toFixed(1)}</RatingBadge>}
+        {averageRating && <RatingBadge rating={averageRating}>★ {parseFloat(averageRating).toFixed(1)}</RatingBadge>}
       </ImageWrapper>
       <Content>
         <TitleEnglish>{englishTitle}</TitleEnglish>

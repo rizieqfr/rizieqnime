@@ -43,6 +43,7 @@ export function ThemeProvider({ children }) {
   useEffect(() => {
     const savedMode = localStorage.getItem('theme-mode');
     if (savedMode === 'light' || savedMode === 'dark') {
+      //eslint-disable-next-line react-hooks/set-state-in-effect
       setMode(savedMode);
     } else {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

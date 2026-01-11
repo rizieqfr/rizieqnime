@@ -1,7 +1,6 @@
 'use client';
 
 import styled from '@emotion/styled';
-import { Star, Calendar, Layers, Activity, Clock } from 'lucide-react';
 
 const Wrapper = styled.div`
   display: flex;
